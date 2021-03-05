@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt Name</title>
-  
+    <title>Top Secret</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <a href="#"><img src="assets/img/eye.png" alt="logo-eye"></a>
+        <a  href="#"><img id="logo" src="assets/img/eye.png" alt="logo-eye"></a>
         <nav>
-            <ul class="nav justify-content-end">
-                <li class="nav-item nav-link">welcome, user</li>
-                <li class="nav-item nav-link" id="logout">log out</li>
+            <ul>
+                <li id="welcome-name">welcome, user</li>
+                <li id="logout"><a href="#">log out</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="hero">
             <div class="left-box">
                 <img src="assets/img/Illustration.png" alt="misterious-man">
             </div>
@@ -33,11 +32,12 @@
         <div class="modal">
             <form action="#">
                 <h1>> LOGIN</h1>
-                <input type="text" name="username" id="name" placeholder="username">
+                <input type="text" name="username" id="user" placeholder="username">
                 <br>
                 <input type="text" name="password" id="password" placeholder="password">
                 <br>
-                <button id="subm-btn">SUBMIT</button>
+                <p id="note"></p>
+                <button id="subm-btn">login</button>
             </form>
         </div>
     </main>

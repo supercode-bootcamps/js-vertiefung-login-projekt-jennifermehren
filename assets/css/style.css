@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  border: none;
 }
 
 body {
@@ -9,16 +11,14 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-button {
-  line-height: 1.5rem;
-  border: none;
-  background-color: rgb(105, 99, 251);
-  border-radius: 3px;
-  margin-top: 1rem;
+a {
+  color: unset;
+  text-decoration: none;
 }
 
-button:hover {
-  box-shadow: inset 5px 5px 20px #44026b, inset -5px -5px 20px #44026b;
+#logo {
+  margin: 1rem;
+  width: 80px;
 }
 
 header {
@@ -35,69 +35,100 @@ ul {
 
 li {
   margin-right: 2rem;
+  padding: 0.5rem;
+}
+
+button {
+  color: white;
+  background-color: rgb(105, 99, 251);
+  border-radius: 3px;
+  line-height: 1.5rem;
+  margin: 1.5rem 0.5rem;
+  padding: 0.2rem;
+}
+
+button:hover,
+#logout:hover {
+  border-right: 2px solid rgb(105, 99, 251);
+  border-bottom: 2px solid rgb(105, 99, 251);
+  position: relative;
+  bottom: -0.1rem;
+  right: -0.1rem;
+  background-color: rgb(154, 199, 132);
+  color: rgb(65, 63, 86);
+  border-radius: 3px;
 }
 
 main {
-  height: 100vh;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
 
-section {
-  width: 100%;
+.hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
 }
 
-.left-box,
 .right-box {
   width: 50%;
+  margin: 1rem;
 }
 
-.right-box div {
-  padding: 10%;
-}
-
-#secret-btn {
-  width: 150px;
+.right-box button {
+  width: 200px;
+  margin-left: 0;
 }
 
 .left-box img {
-  width: 100%;
+  width: 90%;
 }
 
 .modal {
-  visibility: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
   justify-content: center;
-  align-items: center;
   display: flex;
   height: 50vh;
   width: 50vw;
   border-radius: 5px;
   background-color: rgb(135, 132, 165);
+  color: rgb(65, 63, 86);
 }
 
 .modal h1 {
-  margin: 1rem;
+  margin: 2rem;
   text-align: center;
 }
 
-input,
-#subm-btn {
+input {
   width: 250px;
   line-height: 1.5rem;
   margin: 0.5rem;
   padding: 0.2rem;
-  border: none;
+  background-color: rgb(190, 190, 190);
 }
 
-input {
-  background-color: rgb(190, 190, 190);
+#subm-btn {
+  width: 250px;
+}
+
+#note {
+  color: red;
+  text-align: center;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.notVisible {
+  display: none;
+}
+
+.filterOn {
+  filter: blur(4px);
 }
