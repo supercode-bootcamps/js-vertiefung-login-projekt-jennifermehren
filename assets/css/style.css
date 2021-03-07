@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,9 +8,9 @@
 }
 
 body {
-  color: rgb(105, 99, 251);
+  color: rgb(150, 150, 160);
   background-color: rgb(65, 63, 86);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a {
@@ -36,6 +38,17 @@ ul {
 li {
   margin-right: 2rem;
   padding: 0.5rem;
+  min-width: 120px;
+  text-align: center;
+}
+
+#logout{
+  border-right: 2px solid #18147c;
+  border-bottom: 2px solid #18147c;
+  padding: .4rem;
+  color: rgb(175, 47, 47);
+  border-radius: 3px;
+  text-align: center;
 }
 
 button {
@@ -44,19 +57,17 @@ button {
   border-radius: 3px;
   line-height: 1.5rem;
   margin: 1.5rem 0.5rem;
-  padding: 0.2rem;
+  padding: 0.5rem;
+  border-right: 2px solid #18147c;
+  border-bottom: 2px solid #18147c;
 }
 
 button:hover,
 #logout:hover {
-  border-right: 2px solid rgb(105, 99, 251);
-  border-bottom: 2px solid rgb(105, 99, 251);
-  position: relative;
-  bottom: -0.1rem;
-  right: -0.1rem;
+  border: none;
+  border-left: 2px solid #2e5b4c;
+  border-top: 2px solid #2e5b4c;
   background-color: rgb(154, 199, 132);
-  color: rgb(65, 63, 86);
-  border-radius: 3px;
 }
 
 main {
@@ -66,22 +77,37 @@ main {
 
 .hero {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
+  margin: 3rem;
+}
+
+
+.hero h1{
+  font-size: 2.5rem;
 }
 
 .right-box {
   width: 50%;
-  margin: 1rem;
+}
+
+#button-cont{
+  height: 3rem;
+  margin-top: 2rem;
 }
 
 .right-box button {
   width: 200px;
-  margin-left: 0;
+}
+
+.left-box{
+  display: flex;
+  width: 50%;
 }
 
 .left-box img {
   width: 90%;
+  margin-left: auto;
 }
 
 .modal {
@@ -89,19 +115,22 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem;
+  padding: 1rem 4rem;
   justify-content: center;
-  display: flex;
-  height: 50vh;
-  width: 50vw;
   border-radius: 5px;
   background-color: rgb(135, 132, 165);
   color: rgb(65, 63, 86);
+  display: flex;
 }
 
 .modal h1 {
   margin: 2rem;
   text-align: center;
+}
+
+form{
+width: calc(250px + 1rem + 0.4rem);
+justify-content: center;
 }
 
 input {
